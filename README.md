@@ -32,6 +32,9 @@ TARA is a fully offline, privacy-first voice assistant that listens, thinks, spe
 
 ## 🧩 Architecture Overview
 
+![archtara1](https://github.com/user-attachments/assets/27b45a43-6838-40f1-9dd0-1ecdc252e5cf)
+
+
 1. 🎧 `record_audio.py` captures user audio as `output.wav`
 2. 🧠 `whisper.cpp` transcribes the audio → `output.txt`
 3. 🧩 `assistant.py` processes the text:
