@@ -87,3 +87,29 @@ ollama run llama3:8b
 
 # 7. Start the Flask server
 python app.py
+
+## 🧪 Testing the Assistant
+
+You can test it using:
+
+- 🎤 **Voice interaction** via [`POST /transcribe`]
+- 💬 **Text prompt** via [`POST /ask`]
+- 🧠 **Memory inspection** via [`GET /memory`]
+
+You can use **Postman**, **browser**, or any HTTP client to call the endpoints.
+
+---
+
+## 📁 Project Structure
+
+```bash
+.
+├── app.py                # Flask backend
+├── assistant.py          # Core pipeline logic
+├── record_audio.py       # Voice recorder
+├── my_tts.py             # Piper TTS connection
+├── llm.py                # LLaMA3 response handler
+├── memory.json           # Stores assistant memory
+├── output.txt / .wav     # Temp transcription/output
+└── Docker & Model Setup  # External setup
+
