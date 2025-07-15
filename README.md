@@ -113,3 +113,26 @@ You can use **Postman**, **browser**, or any HTTP client to call the endpoints.
 ├── output.txt / .wav     # Temp transcription/output
 └── Docker & Model Setup  # External setup
 
+
+Use Cases
+🔐 Secure offline voice assistant — no cloud dependency
+
+🧠 Privacy-focused AI environments — sensitive data never leaves device
+
+🗣️ Voice-controlled automation — trigger local commands or responses
+
+🏠 Smart home or embedded voice apps — lightweight and efficient
+
+💬 Voice journaling or mental health companion — with memory retention
+
+🌐 Offline assistant in remote areas — works without internet
+
+🙋‍♂️ Author
+Mudimala Yeshwanth Goud
+📧 mudimalayeshwanthgoud@gmail.com
+🛠️ Passionate about AI/ML, NLP, RAG, Data Science, system programming, full-stack development, and intelligent assistant systems.
+
+
+📬 Contact
+For questions, feedback, or contributions:
+📧 yeshwanth.mudimala@motivitylabs.com
