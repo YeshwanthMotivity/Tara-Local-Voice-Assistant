@@ -12,21 +12,21 @@ TARA is a fully offline, privacy-first voice assistant that listens, thinks, spe
 - 🔊 **Text-to-Speech (TTS)** using Piper (Docker-based with Wyoming protocol)
 - 🌐 **Flask API** for web or programmatic interaction
 - 🔐 100% **Offline Execution** (no external API calls)
-- 🧹 Voice-triggered memory clearing: say _“clear memory”_
+- 🧹 **Voice-triggered memory clearing**: say _“clear memory”_
 
 ---
 
 ## 🛠️ Technologies Used
 
-| Component        | Tool / Framework                    |
-|------------------|-------------------------------------|
-| Audio Recording  | `sounddevice`, `wave` (Python)      |
-| Transcription    | `whisper.cpp` + `ggml-base.en.bin`  |
-| LLM Inference    | `LLaMA3` via `Ollama` (localhost API)|
-| Backend          | `Flask`, `asyncio`, `json`          |
-| TTS              | `Piper` (Docker) + Wyoming Protocol |
-| Memory Storage   | Local `memory.json` file            |
-| API Testing      | Postman, Browser                    |
+| Component            |        Tool / Framework             |
+|----------------------|-------------------------------------|
+| **Audio Recording**  | `sounddevice`, `wave` (Python)      |
+| **Transcription**    | `whisper.cpp` + `ggml-base.en.bin`  |
+| **LLM Inference**    | `LLaMA3` via `Ollama` (localhost API)|
+| **Backend**          | `Flask`, `asyncio`, `json`          |
+| **TTS**              | `Piper` (Docker) + Wyoming Protocol |
+| **Memory Storage**   | Local `memory.json` file            |
+| **API Testing**      | Postman, Browser                    |
 
 ---
 
@@ -34,10 +34,11 @@ TARA is a fully offline, privacy-first voice assistant that listens, thinks, spe
 
 ![archtara1](https://github.com/user-attachments/assets/27b45a43-6838-40f1-9dd0-1ecdc252e5cf)
 
+## WorkFlow
 
-1. 🎧 `record_audio.py` captures user audio as `output.wav`
-2. 🧠 `whisper.cpp` transcribes the audio → `output.txt`
-3. 🧩 `assistant.py` processes the text:
+1. 🎧 **`record_audio.py`** captures user audio as `output.wav`
+2. 🧠 **`whisper.cpp`** transcribes the audio → `output.txt`
+3. 🧩 **`assistant.py`** processes the text:
    - If "clear memory" → clears `memory.json`
    - Else → sends context + prompt to LLaMA3 via Ollama
 4. 🧠 Response is saved in memory (`memory.json`)
@@ -48,11 +49,11 @@ TARA is a fully offline, privacy-first voice assistant that listens, thinks, spe
 
 ## 🌐 Flask API Endpoints
 
-| Method | Route         | Description                                |
-|--------|---------------|--------------------------------------------|
+| Method | Route         | Description                                   |
+|--------|---------------|---------------------------------------------- |
 | POST   | `/transcribe` | Runs full pipeline (record → respond → speak) |
-| POST   | `/ask`        | Accepts direct text input, responds & speaks |
-| GET    | `/memory`     | Returns recent conversation history        |
+| POST   | `/ask`        | Accepts direct text input, responds & speaks  |
+| GET    | `/memory`     | Returns recent conversation history           |
 
 ---
 
@@ -67,30 +68,43 @@ TARA is a fully offline, privacy-first voice assistant that listens, thinks, spe
 
 ### 🔧 Setup Steps
 
+**1. Clone the repo**
 ```bash
-# 1. Clone the repo
 git clone https://github.com/your-username/tara-voice-assistant
 cd tara-voice-assistant
+```
 
-# 2. Install dependencies
+**2. Install dependencies**
+```
 pip install -r requirements.txt
+```
 
-# 3. Build whisper.cpp (Windows / CMake)
-# Follow: https://github.com/ggerganov/whisper.cpp
+**3. Build whisper.cpp (Windows / CMake)**
+```
+Follow: https://github.com/ggerganov/whisper.cpp
+```
 
-# 4. Download Whisper and Piper models
-# Whisper: ggml-base.en.bin
-# Piper: en_US-lessac-medium.onnx + .onnx.json
+**4. Download Whisper and Piper models**
+```
+Whisper: ggml-base.en.bin
+Piper: en_US-lessac-medium.onnx + .onnx.json
+```
 
-# 5. Run Piper TTS in Docker
+**5. Run Piper TTS in Docker**
+```
 docker run -it --rm -v "$HOME/piper/voices:/voices" -p 10200:10200 rhasspy/piper --voice en/en_US-lessac-medium
+```
 
-# 6. Start Ollama (LLaMA3 model)
+**6. Start Ollama (LLaMA3 model)**
+```
 ollama run llama3:8b
+```
 
-# 7. Start the Flask server
+**7. Start the Flask server**
+```
 python app.py
-
+```
+---
 ## 🧪 Testing the Assistant
 
 You can test it using:
@@ -115,7 +129,8 @@ You can use **Postman**, **browser**, or any HTTP client to call the endpoints.
 ├── memory.json           # Stores assistant memory
 ├── output.txt / .wav     # Temp transcription/output
 └── Docker & Model Setup  # External setup
-
+```
+---
 
 Use Cases
 🔐 Secure offline voice assistant — no cloud dependency
@@ -130,12 +145,14 @@ Use Cases
 
 🌐 Offline assistant in remote areas — works without internet
 
+---
+
 🙋‍♂️ Author
 Mudimala Yeshwanth Goud
 📧 mudimalayeshwanthgoud@gmail.com
 🛠️ Passionate about AI/ML, NLP, RAG, Data Science, system programming, full-stack development, and intelligent assistant systems.
 
-
+---
 📬 Contact
 For questions, feedback, or contributions:
 📧 yeshwanth.mudimala@motivitylabs.com
