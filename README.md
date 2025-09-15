@@ -153,9 +153,12 @@ You can use **Postman**, **browser**, or any HTTP client to call the endpoints.
 • Mentor / Manager: Mr. Venkata Ramana Sudhakar Polavarapu
 
 Mudimala Yeshwanth Goud
+
 🛠️ Passionate about AI/ML, NLP, RAG, Data Science, system programming, full-stack development, and intelligent assistant systems.
+
 
 ---
 ## 📬 Contact
-For questions, feedback, or contributions:
-📧 yeshwanth.mudimala@motivitylabs.com
+For questions or collaboration, you can reach out at:
+
+**Email 📧** : yeshwanth.mudimala@motivitylabs.com
