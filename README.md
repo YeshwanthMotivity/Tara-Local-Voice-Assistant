@@ -152,9 +152,9 @@ You can use **Postman**, **browser**, or any HTTP client to call the endpoints.
 
 • Mentor / Manager: Mr. Venkata Ramana Sudhakar Polavarapu
 
-Mudimala Yeshwanth Goud
+• Mudimala Yeshwanth Goud
 
-🛠️ Passionate about AI/ML, NLP, RAG, Data Science, system programming, full-stack development, and intelligent assistant systems.
+ 🛠️ Passionate about AI/ML, NLP, RAG, Data Science, system programming, full-stack development, and intelligent assistant systems.
 
 
 ---
