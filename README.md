@@ -92,7 +92,7 @@ Piper: en_US-lessac-medium.onnx + .onnx.json
 
 **5. Run Piper TTS in Docker**
 ```
-docker run -it --rm -v "$HOME/piper/voices:/voices" -p 10200:10200 rhasspy/piper --voice en/en_US-lessac-medium
+docker run -it --rm -v "$HOME/piper/voices:/voices" -p 10200:10200 rhasspy/wyoming-piper --voice en/en_US-lessac-medium
 ```
 
 **6. Start Ollama (LLaMA3 model)**
